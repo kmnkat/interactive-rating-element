@@ -1,0 +1,125 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --light-grey-op: hsla(217, 12%, 63%, 0.2);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  background-color: var(--very-dark-blue);
+  color: var(--light-grey);
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.window {
+  width: 18%;
+  background-color: var(--dark-blue);
+  padding: 2em;
+  border-radius: 2.5rem;
+  align-self: center;
+}
+
+.icon-part {
+  background-color: var(--light-grey-op);
+
+  padding: 1em 1em;
+  border-radius: 50%;
+  display: inline-flex;
+}
+
+h1 {
+  color: var(--white);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.rating-btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+
+.rate-btn {
+  background-color: var(--light-grey-op);
+  padding: 1em 1.3em;
+  display: inline-flex;
+  justify-content: center;
+  border-style: none;
+  font-weight: 700;
+  color: var(--light-grey);
+  border-radius: 50%;
+  font-size: 1.1em;
+}
+
+.active-btn {
+  background-color: var(--orange) !important;
+  color: var(--white) !important;
+}
+
+.rate-btn:hover {
+  color: var(--white);
+  background-color: var(--light-grey);
+  transition-delay: 1s;
+  transition: color 2s, background-color 1s;
+}
+
+.submit-btn {
+  width: 100%;
+  color: var(--white);
+  background-color: var(--orange);
+  padding: 1rem;
+  border-radius: 2rem;
+  border-style: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.submit-btn:hover {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+.center-img {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.comment {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 50%;
+  background-color: var(--light-grey-op);
+  color: var(--orange);
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-color: lightblue;
+  }
+}
