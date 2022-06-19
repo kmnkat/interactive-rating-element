@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- Rating state start -->
-    <div class="window">
+    <div class="window" id="rating-section">
       <div class="icon-part">
         <img src="./images/icon-star.svg" />
       </div>
@@ -49,16 +49,19 @@
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-    <div class="window">
+    <div class="window hide-section" id="thank-you-section">
       <div class="center-img">
         <img src="images/illustration-thank-you.svg" alt="Thank you!" />
       </div>
       <!-- Add rating here -->
       <div class="comment">
-        You selected &nbsp;<span id="rate-val"></span> &nbsp;out of 5
+        You selected&nbsp;<span id="rate-val"></span> &nbsp;out of 5
       </div>
-      Thank you! We appreciate you taking the time to give a rating. If you ever
-      need more support, don’t hesitate to get in touch!
+      <div class="thank-description">
+        <h1>Thank you!</h1>
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </div>
     </div>
 
     <!-- Thank you state end -->
@@ -67,7 +70,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by jesenska_k.
+      >. Coded by kmnkat.
     </div>
     <script type="text/javascript" src="./form.js"></script>
   </body>

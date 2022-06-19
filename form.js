@@ -2,6 +2,9 @@ const group = document.getElementById("btn-group");
 const groupBtns = group.querySelectorAll("button");
 const userRating = document.getElementById("rate-val");
 const submitRate = document.getElementById("submit-btn-rating");
+const rateSection = document.getElementById("rating-section");
+const thankSection = document.getElementById("thank-you-section");
+
 let chosenRating = 0;
 
 function buttonHandler() {
@@ -15,7 +18,6 @@ function buttonHandler() {
         );
       }
       const clicked = event.target;
-      console.log(clicked);
       clicked.classList.add("active-btn");
       chosenRating = event.target.value;
     });
@@ -25,8 +27,11 @@ function buttonHandler() {
 function submitUserRating() {
   submitRate.addEventListener("click", (eventSub) => {
     console.log(userRating.textContent);
+    userRating.textContent = "";
     userRating.textContent += chosenRating;
     console.log(userRating.textContent);
+    rateSection.classList.add("hide-section");
+    thankSection.classList.remove("hide-section");
   });
 }
 buttonHandler();

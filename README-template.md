@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive rating component solution
 
-This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). 
 
 ## Table of contents
 
@@ -14,9 +14,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -31,15 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](my-solution/rateWindow.png)
+![](my-solution/thankYouWindow.png)
 
 ### Links
 
@@ -53,61 +44,52 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JS DOM manipulation
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Working with a group of buttons.
+- Change element style using DOM manipulation.
+- Working with design template.
 
-To see how you can add code snippets, see below:
+The most challenging part was writing my JS function for group of buttons. I usually use some frameworks to handle DOM manipulation so slicing it into step-by-step instructions wasn't intuitive for me.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const group = document.getElementById("btn-group");
+const groupBtns = group.querySelectorAll("button");
+const userRating = document.getElementById("rate-val");
+
+let chosenRating = 0;
+
+function buttonHandler() {
+  for (let i = 0; i < groupBtns.length; i++) {
+    groupBtns[i].addEventListener("click", (event) => {
+      let currentValueBtn = document.querySelector(".active-btn");
+      if (currentValueBtn) {
+        currentValueBtn.className = currentValueBtn.className.replace(
+          "active-btn",
+          ""
+        );
+      }
+      const clicked = event.target;
+      clicked.classList.add("active-btn");
+      chosenRating = event.target.value;
+    });
+  }
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+The other challenging part was working with design provided as screenshoots. I try to measure it and write reusable elements but, as always in this kind of situation, I'm not sure if my solution is optimal.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In the next projects, I would like to try to coordinate informations from many simple components communicating with each other. 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Portfolio Website Tutorial](https://www.youtube.com/watch?v=xV7S8BhIeBo&t=2913s) - Although I was watching (and coding along with) this tutorial some time ago, I remember and used some solutions provided by its author. Thanks to this experience I knew what to do in this project from the first glance (e.g. changing style using JS, use translateX to show and hide windows). 
+- [MDN Web Docs - CSS Reference](https://developer.mozilla.org/pl/docs/Web/CSS/Reference) - I still don't remember many names for CSS properities. Documentation helps me a lot.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/kmnkat)
