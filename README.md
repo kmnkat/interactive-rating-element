@@ -92,4 +92,4 @@ In the next projects, I would like to try to coordinate informations from many s
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/kmnkat)
+- Frontend Mentor - [@kmnkat](https://www.frontendmentor.io/profile/kmnkat)
