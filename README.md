@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [REPOSITORY](https://your-solution-url.com)
-- Live Site URL: [GIT PAGE](https://your-live-site-url.com)
+- Solution URL: [repository](https://github.com/kmnkat/interactive-rating-element)
+- Live Site URL: [github page](https://kmnkat.github.io/interactive-rating-element/)
 
 ## My process
 
