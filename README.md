@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
-- Live Site URL: [](https://your-live-site-url.com)
+- Solution URL: [REPOSITORY](https://your-solution-url.com)
+- Live Site URL: [GIT PAGE](https://your-live-site-url.com)
 
 ## My process
 
